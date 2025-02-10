@@ -1,0 +1,9 @@
+28/01/2025 20:37:46.414 - INFO - Logger initialized
+28/01/2025 20:37:46.414 - INFO - Loading request: C:/Users/raoul/Documents/UpworkProjects/AlgorithmicTradingLib/run.cfg
+28/01/2025 20:37:46.414 - INFO - Creating Context
+28/01/2025 20:37:46.419 - INFO - Running GenericBotTask
+28/01/2025 20:37:46.419 - DEBUG - Connecting to Twelve Data API
+28/01/2025 20:37:46.422 - DEBUG - Starting new HTTPS connection (1): api.twelvedata.com:443
+28/01/2025 20:37:46.675 - DEBUG - https://api.twelvedata.com:443 "GET /technical_indicators?format=JSON&apikey=1e2fc517951842a085c30c1287704c4e&source=python HTTP/1.1" 200 None
+28/01/2025 20:37:46.675 - INFO - Successfully connected to Twelve Data
+28/01/2025 20:37:47.390 - DEBUG - https://api.twelvedata.com:443 "GET /quote?symbol=TSLA&interval=1min&dp=5&timezone=Exchange&prepost=false&format=JSON&apikey=1e2fc517951842a085c30c1287704c4e&source=python HTTP/1.1" 200 None
