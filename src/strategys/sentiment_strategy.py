@@ -31,12 +31,10 @@ class BERTBasedSentimentStrategy(AbstractStrategy):
             news = mkdata_service.get_news(cfg.market_data_api, "TSLA", today, now)
             yesterdays_news = mkdata_service.get_news(cfg.market_data_api, "TSLA", yesterday, yesterday_eod)
 
-            # first model - https://www.youtube.com/watch?v=gfwNK3o45ng
             classifier = pipeline('sentiment-analysis')
             news['DistilBERT_sentiment'] = news['summary'].apply(lambda x: classifier(x)[0]['label'])
             yesterdays_news['DistilBERT_sentiment'] = yesterdays_news['summary'].apply(lambda x: classifier(x)[0]['label'])
 
-            # second - https://www.youtube.com/watch?v=szczpgOEdXs
             tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
             model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
 
