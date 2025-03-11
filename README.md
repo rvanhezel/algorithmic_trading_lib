@@ -36,7 +36,7 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 poetry install
 ```
 
-4.Set up environment variables for Alpaca and Twelve Data API's:
+4.Set up environment variables for all APIs. Currently supported Alpaca, Twelve Data, Alpha Vantage, yFinance:
 
 ```bash
 # Create a .env file in the project root directory with:
@@ -44,6 +44,8 @@ TWELVE_DATA_KEY = your_twelve_data_key
 
 ALPACA_KEY = your_alpaca_key
 ALPACA_SECRET = your_alpaca_secret_key
+
+etc...
 ```
 
 ## 🎬 Running the Application
